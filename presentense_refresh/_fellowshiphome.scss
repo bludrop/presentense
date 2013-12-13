@@ -1,0 +1,111 @@
+/* Fellowship Home Slider */ //NEVER EXISTED
+
+
+
+
+.view-fellowship-slide-show #views_slideshow_singleframe_main_1 .views-field-title {
+	position: absolute;
+	top: 220px;
+	height: 28px;
+	padding: 13px 25px;
+	/*left: -2px;*/
+	width: 100%;
+}
+
+
+.view-fellowship-slide-show #views_slideshow_singleframe_main_1  .views-field-title a {
+	color: #ffffff;
+	text-decoration: none;
+	font: 30px/28px 'LeagueGothicRegular', Arial, sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+
+}
+
+
+.view-fellowship-slide-show #views_slideshow_singleframe_main_1 {
+/*	background: #cccccc;*/
+/*	padding: 10px 6px 6px 7px;*/
+	width: 600px;
+	height: 350px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	padding: 0 !important;
+	
+}
+
+.view-fellowship-slide-show .views_slideshow_singleframe_pager.numbered {
+	position: absolute;
+	top: 536px;
+/*	background: #cccccc;*/
+	width: 600px;
+/*	padding: 0 0 5px 2px;*/
+	margin-bottom: 20px;
+	z-index: 10;
+}
+
+/*.view-fellowship-slide-show .views_slideshow_singleframe_pager div {
+	padding: 0 5px;
+}
+
+.view-fellowship-slide-show .views_slideshow_singleframe_pager div a img {
+	height: 48px;
+	width:  89px;
+}*/
+
+.view-fellowship-slide-show .pager-item{
+	padding: 0 !important;
+	margin: 0;
+	text-indent: -5000px !important;
+	
+} 
+
+.view-fellowship-slide-show .view_slideshow_singleframe_pager div{
+	padding: 0 !important;
+} 
+
+
+
+
+.view-fellowship-slide-show .pager-item a{
+	display: inline-block;
+	background: #000;
+	width: 120px;
+	height: 30px;
+/*	padding: 10px;*/
+	margin: 0;
+/*	border-right: 2px solid #fff;*/
+	content: "";
+} 
+
+.view-fellowship-slide-show .pager-item a.activeSlide{
+	background: #fff;
+} 
+
+.view-fellowship-slide-show .views-field-title { background: #ff0000 !important; }
+
+
+/*
+.view-fellowship-slide-show #views_slideshow_singleframe_div_1_0 .views-field-title { background: #ff0000; }
+.view-fellowship-slide-show #views_slideshow_singleframe_div_1_1 .views-field-title { background: #00b1f0; }
+.view-fellowship-slide-show #views_slideshow_singleframe_div_1_2 .views-field-title { background: #f48019; }
+.view-fellowship-slide-show #views_slideshow_singleframe_div_1_3 .views-field-title { background: #6cbc63; }
+.view-fellowship-slide-show #views_slideshow_singleframe_div_1_4 .views-field-title { background: #724998; }
+
+.view-fellowship-slide-show .views_slideshow_singleframe_pager.thumbnails a.activeSlide img {
+	height: 63px;
+	width:  107px;
+	border: none;
+}*/
+
+.views-field-field-fellowceploc-value{
+	position: absolute;
+	top: 200px;
+	background: #fff;
+	padding: 5px;
+}
+
+.views-field-field-fellowceploc-value .field-item{
+display: inline;
+margin-right: 10px;
+	}
