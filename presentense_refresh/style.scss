@@ -3,15 +3,33 @@
 ** Styles by bludrop studios
 */
 
-/* Colors */
-// Main
+// Colors 
+// =Main
 $ptred: #a02225;
 $darkblue: #4ba6dd;
 $darkgrey: #333132;
-// Accent
+// =Accent
 $lightgrey: #7e8083;
 $orange: #fbb040;
-$lightblue: #93cd35;
+$lightblue: #93cde5;
+
+// =Fellowship Colors
+$boston: #EE3524;
+$chicago: #a71e22;
+$cleveland: #DA2958;
+$global#FDB726;
+$jerusalem: #F68B1F;
+$moscow: #95C842;
+$newyork: #00A651;
+$philadelphia: #13B8DA;
+$telaviv: #00527f;
+$threshold: #3953A4;
+$washingtondc: #8800cc;
+$wcjcc: #d9007e;
+
+// Use this until MAPS come out in Sass 3.3
+$cities: (boston #EE3524) (chicago #a71e22) (cleveland #DA2958) (global #FDB726) (jerusalem #F68B1F) (moscow #95C842) (newyork #00A651) (philadelphia #13B8DA) (telaviv #00527f) (threshold #3953A4) (washingtondc #8800cc) (wcjcc #d9007e);
+
 
 /* Fonts */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
@@ -26,6 +44,16 @@ $sspro: "Source Sans Pro";
 	font-style: normal;
 }
 $leaguegothic: 'LeagueGothicRegular';
+
+// This font should also be deprecated
+@font-face {
+	font-family: 'Desyrel';
+	src: url('fonts/desyrel-webfont.eot');
+	src: local('☺'), url('fonts/desyrel-webfont.woff') format('woff'), url('fonts/desyrel-webfont.ttf') format('truetype'), url('fonts/desyrel-webfont.svg#webfontDHYUuUJT') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 /* Other Variables */
 $fullwidth: 949px;
@@ -52,8 +80,9 @@ margin-bottom: 20px;
 
 a {
 	color: $ptred;
+	text-decoration: none;
 	&:hover, &:active{
-		text-decoration: none;	
+		text-decoration: underline;
 	}
 }
 
@@ -167,7 +196,7 @@ margin-top: 2px;
 				height: 41px;
 				color: #4d4d4d;
 				font-weight: normal;
-				text-decoration: none;
+				text-decoration: none; //remove
 				&.active{
 					color: white;
 					background: $ptred /*url(images/menu-bg.png) left bottom no-repeat*/; //this png has to change color
@@ -425,10 +454,10 @@ li#newsletter-signup{
 		font-size: 30px;
 		text-transform: none;
 		color: $ptred;
-		a{
-			text-decoration: none;
-			color: $ptred;
-		}
+//		a{
+//			text-decoration: none;
+//			color: $ptred;
+//		}
 	}
 	h2{
 		font-size: 20px;
@@ -871,100 +900,93 @@ padding:0;
 }
 
 
-/* Fellows Directory */
+// PICK UP HERE TO KEEP WORKING!
+
+/* Fellows Directory */ // Does this even exist anymore?
 body.path-fellows .views-table {
-float: left;
-width: 175px;
-margin-right: 20px;
-}
-
-body.path-fellows .views-table caption{
-font-weight: bold;
-font-size: 15px;
-}
-
-body.path-fellows .views-table a{
-text-decoration: none;
-border: none;
-}
-
-.view-fellows-directory .views-table {
+    float: left;
+    width: 175px;
+    margin-right: 20px;
+    caption{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    a{
+        border: none;
+    }
 }
 
 body.path-fellows-all .views-field-title {
-position: absolute;
-bottom: 0;
-background: rgba(0, 0, 0, .75);
-padding: 3px;
-width: 94px;
-font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, .75);
+    padding: 3px;
+    width: 94px;
+    font-size: 13px;
+    a{
+        border-bottom: none;
+        color: #fff;
+    }
 }
 
-body.path-fellows-all .views-field-title a{
-text-decoration: none;
-border-bottom: none;
-color: #fff;
-}
 
-.view-fellows-directory .views-table .fellow-name a{
-font-weight: bold;
-}
 
 .view-fellows-directory .views-table{
-font-size: 13px;
+	font-size: 13px;
+	.fellow-name a{
+		font-weight: bold;
+	}
+	
+
 }
+
 
 /* Views Display Tabs */
 
-a.viewsdisplaytabs-tab {
+/* = Our Team */
 
-
+.viewsdisplaytabs-wrapper .viewsdisplaytabs-group-wrapper{
+  body.path-our-team &{
+	  margin-left: 0;
+  }
+  @each $path in our, about {
+  	body.path-#{$path}-team &{
+  		ul{
+  			margin: 1em 0 1em 0;
+  			padding: 3px 0px 7px 0px;
+  			width: 650px;
+  		}
+  	}
+  }
+  ul{
+  	li{
+		 a {
+			padding: 7px 10px !important;
+			-webkit-border-radius: 0 !important;
+			-moz-border-radius: 0 !important;
+			border-radius: 0 !important;
+			&:hover{
+				background-color: #ccc;
+			}
+			&.viewsdisplaytabs-active:hover{
+				background-color: #fff;
+			}
+		}
+  		
+  	}
+  }
 }
-
-body.path-our-team .viewsdisplaytabs-wrapper .viewsdisplaytabs-group-wrapper{
-	margin-left: 0;
-}
-
-body.path-our-team .viewsdisplaytabs-wrapper .viewsdisplaytabs-group-wrapper ul,body.path-about-team .viewsdisplaytabs-wrapper .viewsdisplaytabs-group-wrapper ul {
-	margin: 1em 0 1em 0;
-	padding: 3px 0px 7px 0px;
-	width: 650px;
-}
-
-.viewsdisplaytabs-wrapper .viewsdisplaytabs-group-wrapper ul li a {
-	padding: 7px 10px !important;
-	-webkit-border-radius: 0 !important;
-	-moz-border-radius: 0 !important;
-	border-radius: 0 !important;
-}
-
-.viewsdisplaytabs-wrapper .viewsdisplaytabs-group-wrapper ul li a:hover{
-		background-color: #ccc;
-
-}
-
-.viewsdisplaytabs-wrapper .viewsdisplaytabs-group-wrapper ul li a.viewsdisplaytabs-active:hover{
-background-color: #fff;
-
-	
-}
-
 
 /* Team Profile Styles */
 
-.view-PT-Team .views-row, .view-GlobalSC2011-list .views-row, .view-SocialStart-Trainers .views-row, .view-PT-Team-Israel .views-row{
-	/*border-bottom: 1px solid #ccc;
-	border-color: #ececec;*/
-	margin: 10px 0 !important;
-	padding: 10px 0 !important;
-
-			clear: both;
-
-
-}
-
-.profile-block{
-
+@each $team in PT-Team, SocialStart-Trainers, PT-Team-Israel{
+	.view-#{$team} .views-row{
+		/*border-bottom: 1px solid #ccc;
+		border-color: #ececec;*/
+		margin: 10px 0 !important;
+		padding: 10px 0 !important;
+		clear: both;
+	}
 }
 
 .profile-photo {
@@ -976,170 +998,102 @@ background-color: #fff;
 .profile-rest {
 	float: left;
 	width: 400px;
-}
-
-.profile-rest h2 {
-	font-size: 25px !important;
-	/*text-transform: uppercase;*/
-}
-
-.profile-rest h2 a {
-	text-decoration: none;
-	color: #e71c1c;
-
-}
-
-.profile-rest .views-field-field-jtitle-value {
-	font-style: italic;
-	font-size: 12px;
-}
-
-.profile-rest .views-field-field-bio-value p {
-	text-align: justify;
-	font-size: 13px;
-	font-family: sans-serif;
+	h2 {
+		font-size: 25px !important;
+		/*text-transform: uppercase;*/
+		a {
+			text-decoration: none;
+			color: $ptred;
+		}
+	}
+	.views-field-field-jtitle-value {
+		font-style: italic;
+		font-size: 12px;
+	}
+	.views-field-field-bio-value p {
+		text-align: justify;
+		font-size: 13px;
+	}
 }
 
 /* Venture Table Styles */
 
-
-
 .view-venture-view{
 	font-size: 12px !important;
+	thead{
+		background-color: #dfdfdf; //leave for now
+		tr th{
+			text-align: center !important;
+		}
+	}
+	tr{
+		border-bottom: none !important;
+		td{
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
+		}
+		&.odd{
+			background-color: #fff !important;
+			td.active{
+				background-color: #fff !important;
+			}
+			
+		}
+		&.even td.active{ //This is not the best way to do this
+			background-color: #eee !important;
+		}
+				
+	}
+	td{
+		padding-left: 10px !important;
+	}
 }
-
-.view-venture-view thead{
-	background-color: #dfdfdf;
-}
-
-.view-venture-view thead tr th{
-	text-align: center !important;
-}
-
-.view-venture-view tr{
-border-bottom: none !important;
-}
-
-.view-venture-view tr td{
-padding-top: 10px !important;
-padding-bottom: 10px !important;
-}
-
-.view-venture-view td{
-padding-left: 10px !important;
-}
-
-.view-venture-view tr.odd{
-	background-color: #fff !important;
-}
-
-.view-venture-view tr.odd td.active{
-	background-color: #fff !important;
-}
-
-
-.view-venture-view tr.even td.active{
-	background-color: #eee !important;
-}
-
-.view-venture-view td.views-field-title a,
-.view-venture-view td.views-field-field-founder-nid a
-{
-text-decoration: none !important;
-}
-
-.view-venture-view td.views-field-title a:hover,
-.view-venture-view td.views-field-field-founder-nid a:hover
-{
-text-decoration: underline !important;
-}
-
 
 /* Venture Profile Styles */
 
-body.type-venture{
-font-family: "Open Sans", Arial, sans-serif !important;
-}
-
-/* Generated by Font Squirrel (http://www.fontsquirrel.com) on January 19, 2011 12:45:08 AM America/New_York */
-
-@font-face {
-	font-family: 'Desyrel';
-	src: url('fonts/desyrel-webfont.eot');
-	src: local('☺'), url('fonts/desyrel-webfont.woff') format('woff'), url('fonts/desyrel-webfont.ttf') format('truetype'), url('fonts/desyrel-webfont.svg#webfontDHYUuUJT') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-
-body.type-venture .field-field-founder{
-font-family: 'DesyrelRegular', Arial, sans-serif !important;
-}
-
 #venture-profile{
-/*padding-bottom: 60px;*/
+	/*padding-bottom: 60px;*/
+	h1{
+		font-size: 40px;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 5px;
+	}
+	h2{
+		font-weight: 100;
+		margin-bottom: 20px;
+		text-align: right;
+	}
 }
-
-#venture-profile h1{
-	font-size: 40px;
-	border-bottom: 1px solid #ccc;
-	margin-bottom: 5px;
-
-}
-
-#venture-profile h2{
-	font-family: "Desyrel";
-	margin-bottom: 20px;
-	text-align: right;
-}
-
-#venture-profile h2 a{
-	text-decoration: none;
-}
-
-#venture-profile h2 a:hover{
-	text-decoration: underline;
-}
-
-/*.imagefield-field_venture_logo{
-	float: right;
-}
-*/
 
 #venture-details{
-display: block;
-width: 150px;
-float: left;
-margin-right: 20px;
-	background: #ddd;
+	display: block;
+	width: 150px;
+	float: left;
+	margin-right: 20px;
+	background: #ddd; //leave for now
 	padding: 1em;
 	font-size: 14px;
-
-
 }
 
 #venture-logo{
-
-width: 150px;
-margin-bottom: 1em;
+	width: 150px;
+	margin-bottom: 1em;
 }
 
 #venture-factbox{
 	width: 150px;
-}
-
-#venture-factbox h3{
-	margin: 0;
-	border-bottom: 1px solid #ccc;
-
-}
-
-#venture-factbox dt{
-	font-weight: bold;
-}
-
-#venture-factbox dd{
-margin-left: 10px !important;
+	h3{
+		margin: 0;
+		border-bottom: 1px solid #ccc;
+	}
+	dt{
+		font-weight: bold;
+	}
+	
+	dd{
+	margin-left: 10px !important;
+	}
+	
 }
 
 #venture-text{
@@ -1150,24 +1104,22 @@ margin-left: 10px !important;
 
 
 body.path-taxonomy-term .taxonomy{
-clear: both;
-margin-bottom: 10px;
+	clear: both;
+	margin-bottom: 10px;
 }
 
 
 /* Fellow Profile Styles */
-body.type-fellow-profile{
-font-family: "Open Sans", Arial, sans-serif !important;
-
-}
 
 #fellow-profile{
 }
+
 #fellow-left{
 	float: left;
 	width: auto;
 	margin-top: -20px;
 }
+
 #fellow-right{
 	/*float: left;
 	width: auto;*/
@@ -1175,65 +1127,37 @@ font-family: "Open Sans", Arial, sans-serif !important;
 	margin-left: 15px;
 	margin-top: 20px;
 	/*border: 1px solid #999;*/
-
 }
 
-#profile, .view-Global-Institute-Fellows-List .views-row{
+#profile{
 	background: white;
-/*display: inline;*/
-margin: 0 30px 10px 0px;
-width: 200px;
-padding: 20px 10px 15px;
-text-align: center;
-text-decoration: none;
-color: #333;
-font-size: 18px;
--webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
--moz-box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
-/*-webkit-transform: rotate(-2deg);*/
-/*-webkit-transition: -webkit-transform .15s linear;*/
-/*-moz-transform: rotate(-2deg);*/
-border: 1px solid #EEE;
-}
-
-.view-Global-Institute-Fellows-List .views-row{
-float: left !important;
-margin: 0 50px 20px 0px !important;
-}
-
-#profile a, .view-Global-Institute-Fellows-List a{
+	/*display: inline;*/
+	margin: 0 30px 10px 0px;
+	width: 200px;
+	padding: 20px 10px 15px;
+	text-align: center;
 	text-decoration: none;
-}
-
-#profile a:hover, .view-Global-Institute-Fellows-List a:hover{
-	text-decoration: underline;
-}
-
-
-
-#profile p, .view-Global-Institute-Fellows-List p{
-margin: 0;
-}
-
-#profile #fellow-name, .view-Global-Institute-Fellows-List .fellow-name{
-font-family: "Desyrel", sans-serif;
-/*font-weight: bold;*/
-/*letter-spacing: -0.06em;*/
-}
-
-#profile #fellow-name a, .view-Global-Institute-Fellows-List .fellow-name a{
-	color: #000;
-}
-
-#profile #fellow-venture, .view-Global-Institute-Fellows-List .views-field-field-venture-nid{
-	font-size: 12px;
-	font-style: italic;
-} 
-
-#profile img, .view-Global-Institute-Fellows-List img{
-	margin-bottom: 5px;
-	border: 1px solid #eee;
-
+	color: #333;
+	font-size: 18px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .25); //need to prefix?
+	border: 1px solid #EEE;
+	p{
+		margin: 0;
+	}
+	#fellow-name{
+		font-weight: 800; //also could do 100
+		a{
+			color: #000;
+		}
+	}
+	#fellow-venture{
+		font-size: 12px;
+		font-style: italic;
+	}
+	img{
+		margin-bottom: 5px;
+		border: 1px solid #eee;
+	}
 }
 
 #cep_info{
@@ -1242,21 +1166,8 @@ font-family: "Desyrel", sans-serif;
 	font-size: 12px;
 }
 
-#cep_loc{
-}
-
-#cep_loc a{
-	text-decoration: none;
-}
-
-#cep_loc a:hover{
-	text-decoration: underline;
-}
-
-
 #cep_year{
 	float: right;
-	
 }
 
 .fellow-tags{
@@ -1268,21 +1179,13 @@ font-family: "Desyrel", sans-serif;
 #fellow-bio{
 	background: #eee;
 	padding: 10px 20px;
+	p{
+		text-align: justify;
+	}
 }
 
-#fellow-bio p{
-	text-align: justify;
-}
 
-#fellow-contact{
-/*	text-align: right;*/
-}
-
-#fellow-contact a{
-/*	text-align: left;*/
-}
-
-/* @group Social Profile Links */
+/* @group Social Fellow Profile Links */ //This needs to be fixed
 a.profile_twitter{
 display: block;
 	width: 16px !important;
@@ -1306,6 +1209,7 @@ a.profile_linkedin{
 	text-indent: -9999px;
 
 }
+
 /*
 .view-fellow-venture-attach{
 display: none;
@@ -1314,201 +1218,45 @@ display: none;
 
 /* @end */
 
-
-/* Launch Nights block */
-#launch-rightblock{
-	/*background: #fbdfdf url('psd/join-the-convo-2.jpg');*/
-	/*background: #fbdfdf;*/
-	background: #f1f6ee url('images/launch2011/linethingy.png') repeat-y;
-	width: 250px;
-	height: 340px;
-/*	text-indent: -5000px;*/
-	font-family: Arial;
-	margin-bottom: 20px;
-	overflow: hidden;
-	/*border: 1px solid #999;*/
-}
-
-#launch-rightblock p{
-	margin: 0 20px;
-	margin-left: 30px;
-	text-align: justify;
-}
-
-#launch-acc{
-	width: 250px;
-	height: 340px;
-	margin-top: -7;
-	
-}
-
-#join-introp{
-	/* margin-top:-5px;
-	 margin-bottom: 5px;
-	*/
-	
-}
-
-#join-introp p{
-	margin-top: 15px;
-	margin-bottom: 15px;
-	
-
-}
-
-#join-introp a{
-	color: #e31c18;
-	text-decoration: none;
-	border: none;
-}
-
-#join-introp a:hover{
-	text-decoration: underline;
-	
-}
-
-
-#launch-rightblock h2{
-margin: 5px 0;
-/*	margin: 0;*/
-	/*border-bottom: 1px solid #000;*/
-}
-
-#launch-rightblock h2 a{
-	display: block;
-	height: 30px;
-	/*background: orange;*/
-	background: url('images/launch2011/arrow-back-green3.png') no-repeat;
-	padding-top: 3px;
-	/*text-indent: -5000px;*/
-outline: 0 !important;
-	color: #fff !important;
-	text-decoration: none;
-	font-size: 19px;
-	padding-left: 10px;
-	text-shadow: 1px 1px 5px #666;
-	
-
-}
-
-#launch-rightblock h2 a:focus,#launch-rightblock h2 a:active{
-outline: 0;
-}
-
-#launch-rightblock h2#launch{
-	margin-top: 0px !important;
-}
-
-#launch-rightblock h2#launch a{
-	background: red url('images/launch2011/LAUNCHHEADER-back6.png') !important;
-	text-indent: -5000px;
-
-}
-
-
-/*
-#launch-rightblock h2#join a{
-	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 -91px;
-}
-
-#launch-rightblock h2#subscribe a{
-	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 -60px;
-}
-
-#launch-rightblock h2#volunteer a{
-	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 -30px;
-}
-
-#launch-rightblock h2#pitch a{
-	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 0px;
-}
-*/
-
-#launch-rightblock p{
-	font-size: 12px !important;
-/*	background: #fbdfdf;*/
-	/*padding: 5px;*/
-}
-
-
-#launch-rightblock a.awesome{
-	margin-top: 10px;
-}
-
-/* HEBREW SECTION STYLES */
-
-body.path-he{
-
-
-}
-
-body.path-he #article{
-float: right !important;
-}
-
-body.path-he #sidebar-right{
-float: right !important;
-}
-
-body.path-he h1{
-text-align: right !important;
-direction:rtl;
-
-}
-
-body.path-he ul.jquerymenu{
-text-align: right !important;
-direction: rtl;
-}
-
 /* New NivoSlider Front Styles */
-body.front .nivo-controlNav{
-	left: 0 !important;
-	bottom: auto !important;
-	width: 10px;
-} 
 
-body.front a.nivo-control{
-	background: #000 !important;
-	height: 113px !important;
-
+body.front{ //Front Page Only
+	.nivo-controlNav{
+		left: 0 !important;
+		bottom: auto !important;
+		width: 10px;
+		a.active{
+//			background: #ccc !important;
+			background: $lightgrey;
+		}
+		
+	} 
+	a.nivo-control{
+		background: #000 !important;
+		height: 113px !important;
+		&[rel="0"]{
+			background: $ptred !important;
+		}
+		&[rel="1"]{
+			background: $orange !important;
+		}
+		&[rel="2"]{
+			background: $darkblue !important;
+		}
+		
+	}
+	.nivo-slice{
+		z-index: 1 !important;
+	}
+	.nivo-imageLink{
+		z-index: 2 !important;
+	}
+	a.nivo-prevNav {
+	  left:25px !important;
+	}
 }
 
-body.front a.nivo-control[rel="0"]{
-	background: #F48019 !important;
-}
-
-body.front a.nivo-control[rel="1"]{
-	background: #BE1D2D !important;
-}
-
-body.front a.nivo-control[rel="2"]{
-	background: #6CBC63 !important;
-}
-
-
-body.front .nivo-controlNav a.active{
-	background: #ccc !important;
-}
-
-body.front .nivo-slice{
-	z-index: 1 !important;
-
-}
-
-body.front .nivo-imageLink{
-	z-index: 2 !important;
-}
-
-body.front a.nivo-prevNav {
-  left:25px !important;
-}
-
-.fb-social-like-widget{
-margin-top: 10px;
-}
-
-/* Launch Nights 2012 - Meet a Fellow - Homepage Styles */
+/* Meet a Fellow - Homepage Styles */ //Still Kickin'
 #meet-a-fellow{
 	display: block;
 	width: 250px;
@@ -1518,340 +1266,244 @@ margin-top: 10px;
 /*	box-shadow: 2px 2px 5px #999;*/
 	padding: 0;
 	border: 1px solid #939598;
-	
+	.fellowln{
+		/*  float: left;*/
+		color: #000;
+		/*  border: 2px solid;*/
+		margin: 0;
+		margin-right: 40px;
+		.lninfo{
+			display: block;
+		/*	width: 225px;*/
+			height: 100px;
+		/*	padding: .5em;*/
+		/*	bottom: 0;*/
+			z-index: 1;
+			color: #fff;
+			background-color: #dfdfdf; //leave for now
+			text-shadow: 1px 1px 3px #333;
+			position: relative;
+			img{
+				display: block;
+				float: left;
+				width: 100px;
+			}
+			h2{
+				float: left;
+				width: 100px;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 5px;
+				right: 0;
+				color: #fff;
+			}
+			p{
+				line-height: 1em;
+				margin: 0;
+			}
+			
+		}
+		.city{
+			position: absolute;
+			/*bottom: 60px;*/
+			bottom: 0;
+			right: 40px;
+			background: #ccc;
+			display: block;
+			color: #fff;
+			padding: 5px;
+			width: 200px;
+			/*display: inline-block;*/
+			font-weight: 100;
+			text-shadow: 1px 1px 3px #333;
+			text-align: center;
+			font-size: 14px !important;
+		}
+		@each $city in $cities{ // Show colors for each city. $cities is defined with the colors
+			$klass: nth($city, 1);
+			$kolor: nth($city, 2);
+		
+			&.#{$klass}{
+		  		.lninfo, .city{
+		  			background-color: $kolor;
+		  		}
+		 	}
+		 }
+		 .ventureln{
+		 /*	display: block;
+		 	top: 1px;
+		 	right: 0;
+		 	margin-right: 10px;
+		 	margin-top: 10px;
+		 	left: 110px;*/
+		 	color: #000;
+		 	font-size: 1.2em;
+		 	margin: 5px 0 0 0;
+		 }
+		 .name{
+		 /*	position: relative;*/
+		   	font-size: 1.3em;
+		 	font-weight: 600;
+		 	width: 90%;
+		 }
+		 .vdesc{
+		 	display: block;
+		 	/*background: #f5f5f5;*/
+		 	padding: 10px;
+		 	font-size: 12px;
+		 	/*width: 175px;
+		 	height: 75px;*/
+		 /*	margin-top: 150px;*/
+		 	/*margin-left: 10px;*/
+		 	color: #000;
+		 	line-height: 1.3em !important;
+		 	text-shadow: 1px 1px 1px #EEE;
+		 	p{
+		 		line-height: 1.3em !important;
+		 	}
+		 	a{
+			 	/*position: relative;*/
+			 	display: block;
+			 	margin-top: 5px;
+			 	text-align: right;
+			 	text-shadow: none;
+		 	}
+		 }
+	}
+	.venture_infoln{
+		display: block;
+		clear: both;
+		padding-left: 5px;
+		margin-top: 15px;
+		h2{
+			a{
+				color: #000;
+			}
+        }
+	}
 }
 
 
-#meet-a-fellow .fellowln{
-/*  float: left;*/
-  color: #000;
-   font-family: 'Open Sans','Helvetica Neue', Arial, sans-serif;
-/*  border: 2px solid;*/
-	margin: 0;
- 	margin-right: 40px;
-
-}
-
-
-#meet-a-fellow .fellowln .lninfo{
-	display: block;
-/*	width: 225px;*/
-	height: 100px;
-/*	padding: .5em;*/
-/*	bottom: 0;*/
-	z-index: 1;
-	color: #fff;
-	background-color: #dfdfdf;
-	text-shadow: 1px 1px 3px #333;
-	position: relative;
-
-}
-
-#meet-a-fellow .fellowln .lninfo img{
-	display: block;
-	float: left;
-	width: 100px;
-
-}
-#meet-a-fellow .fellowln .lninfo h2{
-	float: left;
-	width: 100px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	bottom: 5px;
-	right: 0;
-   font-family: 'Open Sans','Helvetica Neue', Arial, sans-serif;
-	color: #fff;
-}
-
-
-/* @group Fellowship Colors */
-
-#meet-a-fellow .fellowln.boston .lninfo, #meet-a-fellow .fellowln.boston .city{
-	background: #EE3524;
-}
-
-#meet-a-fellow .fellowln.chicago .lninfo, #meet-a-fellow .fellowln.chicago .city{
-	background: #a71e22;
-}
-
-#meet-a-fellow .fellowln.cleveland .lninfo, #meet-a-fellow .fellowln.cleveland .city{
-	background: #DA2958;
-}
-
-#meet-a-fellow .fellowln.global .lninfo, #meet-a-fellow .fellowln.global .city{
-	background: #FDB726;
-}
-
-#meet-a-fellow .fellowln.jerusalem .lninfo, #meet-a-fellow .fellowln.jerusalem .city{
-	background: #F68B1F;
-}
-
-
-#meet-a-fellow .fellowln.moscow .lninfo, #meet-a-fellow .fellowln.moscow .city{
-	background: #95C842;
-}
-
-#meet-a-fellow .fellowln.newyork .lninfo,#meet-a-fellow .fellowln.newyork .city{
-	background: #00A651;
-}
-
-
-#meet-a-fellow .fellowln.philadelphia .lninfo, #meet-a-fellow .fellowln.philadelphia .city{
-	background: #13B8DA;
-}
-
-#meet-a-fellow .fellowln.telaviv .lninfo, #meet-a-fellow .fellowln.telaviv .city{
-	background: #00527f;
-}
-
-#meet-a-fellow .fellowln.threshold .lninfo, #meet-a-fellow .fellowln.threshold .city{
-	background: #3953A4;
-}
-
-#meet-a-fellow .fellowln.washingtondc .lninfo, #meet-a-fellow .fellowln.washingtondc .city{
-	background: #8800cc;
-}
-
-
-#meet-a-fellow .fellowln.wcjcc .lninfo, #meet-a-fellow .fellowln.wcjcc .city{
-	background: #d9007e;
-}
-
-
-/* @end */
-
-#meet-a-fellow .fellowln p{
-line-height: 1em;
-margin: 0;
-}
-
-#meet-a-fellow .fellowln .city{
-position: absolute;
-/*bottom: 60px;*/
-bottom: 0;
-right: 40px;
-background: #ccc;
-display: block;
-color: #fff;
-padding: 5px;
-width: 200px;
-
-/*display: inline-block;*/
-font-weight: 100;
-text-shadow: 1px 1px 3px #333;
-text-align: center;
-font-size: 14px !important;
-}
-
-#meet-a-fellow .venture_infoln{
-display: block;
-	clear: both;
-	padding-left: 5px;
-	margin-top: 15px;
-}
-
-#meet-a-fellow .venture_infoln h2{
-   font-family: 'Open Sans','Helvetica Neue', Arial, sans-serif;
-}
-
-#meet-a-fellow .venture_infoln h2 a{
-	text-decoration: none;
-	color: #000;
-}
-
-
-#meet-a-fellow .fellowln .ventureln{
-/*	display: block;
-	top: 1px;
-	right: 0;
-	margin-right: 10px;
-	margin-top: 10px;
-	left: 110px;*/
-	color: #000;
-	font-size: 1.2em;
-	margin: 5px 0 0 0;
-}
-
-#meet-a-fellow .fellowln .name{
-/*	position: relative;*/
-  	font-size: 1.3em;
-	font-weight: 600;
-	width: 90%;
-}
-
-
-#meet-a-fellow .fellowln .vdesc{
-	display: block;
-	/*background: #f5f5f5;*/
-	padding: 10px;
-	font-size: 12px;
-	/*width: 175px;
-	height: 75px;*/
-/*	margin-top: 150px;*/
-	/*margin-left: 10px;
-*/
-	color: #000;
-	line-height: 1.3em !important;
-	text-shadow: 1px 1px 1px #EEE;
-}
-
-#meet-a-fellow .fellowln .vdesc p{
-	line-height: 1.3em !important;
-}
-
-#meet-a-fellow .fellowln .vdesc a{
-/*position: relative;*/
-display: block;
-margin-top: 5px;
-text-align: right;
-text-shadow: none;
-
-}
-
-
-#ln2012{
+#ln2012{ //Hidden/Removed
 	display: none;
 	margin-right: 45px;
 	clear: both;
-	font-family: "Open Sans";
 	color: #fff;
 	font-weight: bold;
 	position: absolute;
 	bottom:5px;
-}
-
-#ln2012 h3{
-	margin: 0;
-	padding: 0;
-}
-
-#ln2012 a{
-display: block;
-background: url(images/launch2012/jim2012-2.png)no-repeat;
-	width: 205px;
-	height: 48px;
-	text-indent: -5000px;
-
+	h3{
+		margin: 0;
+		padding: 0;
+	}
+	a{
+		display: block;
+		background: url(images/launch2012/jim2012-2.png)no-repeat;
+		width: 205px;
+		height: 48px;
+		text-indent: -5000px; //think about using extend for image replacement?
+	}
 }
 
 
-/* Story Listing (5 Minutes With) Styles */
+/* Story Listing (5 Minutes With) Styles */ //Still around?
 
 body.path-launch-nights-2012-interviews table{
-width: 588px;
-margin-bottom: 20px;
-}
-
-body.path-launch-nights-2012-interviews table thead{
-display: none;
-}
-
-body.path-launch-nights-2012-interviews table a{
-text-decoration: none;
-}
-
-body.path-launch-nights-2012-interviews table a:hover{
-text-decoration: underline;
-}
-
-
-body.path-launch-nights-2012-interviews table td{
-background: none !important;
-vertical-align: top;
-}
-
-body.path-launch-nights-2012-interviews table tr{
-border-bottom: 1px solid #ddd;
-/*margin-bottom: 5px;*/
-}
-
-body.path-launch-nights-2012-interviews table tr.odd{
-background: #eee;
-
-}
-
-body.path-launch-nights-2012-interviews table tr.even{
-background: #fff;
-
-}
-
-
-body.path-launch-nights-2012-interviews table caption{
-  background:#000000;
-font-family: "LeagueGothicRegular", Arial, Sans-serif;
-  font-size:30px;
-  text-transform:uppercase;
-/*	margin-bottom: 10px;*/
-color: #fff;
+	width: 588px;
+	margin-bottom: 20px;
+	thead{
+		display: none;
+	}
+	td{
+		background: none !important;
+		vertical-align: top;
+		&.views-field-field-fellowphoto-fid{
+			width: 50px;
+			padding: 10px;
+			/*padding-right: 10px;*/
+		}
+		&.views-field-title{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 15px;
+			>a{
+				font-family: Georgia, serif;
+				font-size: 20px;
+			}
+			a:last-child{ // ?
+				font-size: 14px !important;
+			}
+			
+		}
+	}
+	tr{
+		border-bottom: 1px solid #ddd;
+		/*margin-bottom: 5px;*/
+		&.odd{
+			background: #eee;
+		}
+		&.even{
+			background: #fff;
+		}
+	}
+	caption{
+		background:#000000;
+		font-family: $leaguegothic, Arial, Sans-serif;
+		font-size:30px;
+		text-transform:uppercase;
+		/*	margin-bottom: 10px;*/
+		color: #fff;
+		a{
+			color: #fff;
+		}
+		
+	}
 	
 }
 
-body.path-launch-nights-2012-interviews table caption a{
-color: #fff;
-text-decoration: none;
-}
 
-body.path-launch-nights-2012-interviews table td.views-field-field-fellowphoto-fid{
-width: 50px;
-padding: 10px;
-/*padding-right: 10px;*/
-}
-
-body.path-launch-nights-2012-interviews table td.views-field-title{
-padding-top: 10px;
-padding-bottom: 10px;
-font-size: 15px;
-}
-
-body.path-launch-nights-2012-interviews table td.views-field-title>a{
-font-family: Georgia, serif;
-font-size: 20px;
-}
-
-
-body.path-launch-nights-2012-interviews table td.views-field-title a:last-child{
-font-family: Arial,sans-serif;
-font-size: 14px !important;
-}
-
-/* Events Calendar Styles */
+/* Events Calendar Styles */ //For hub site
 .view-content .calendar-calendar .links{
-display: none !important;
+	display: none !important;
 }
 
 .calendar-calendar td .inner div.day a{
-color: #777 !important;
+	color: #777 !important;
 }
 
-#calpopup-body h1{
-margin: 0 !important;
-font-size: 1.2em !important;
+#calpopup-body{
+	h1{
+		margin: 0 !important;
+		font-size: 1.2em !important;
+	}
+	
+	h2{
+		display: none !important;
+	}
+	
+	p{
+		display: none !important;
+	}
+	
+	#nodelink{
+		margin: 0 !important;
+	}
+	
+	.node_read_more{
+		display: none !important;
+	}
 }
 
-#calpopup-body h2{
-display: none !important;
-}
-
-#calpopup-body p{
-display: none !important;
-}
-
-#calpopup-body #nodelink{
-margin: 0 !important;
-}
-
-#calpopup-body .node_read_more{
-display: none !important;
-}
 
 #popup-close{
-float: right !important;
-padding: 10px 10px 0 0 !important; 
+	float: right !important;
+	padding: 10px 10px 0 0 !important; 
 }
 
 /* Impact Page Styles */
-body.path-impact #article h1, body.path-impact #article h2{
-display: none !important; 
+body.path-impact{
+	#article h1, #article h2{
+		display: none !important; 
+	}
 }
