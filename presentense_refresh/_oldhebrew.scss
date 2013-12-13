@@ -1,0 +1,19 @@
+// OLD
+/* HEBREW SECTION STYLES */
+
+body.path-he{
+	direction:rtl;
+	#article{
+		float: right !important;
+	}
+	#sidebar-right{
+	float: right !important;
+	}
+	body.path-he h1{
+		text-align: right !important;
+	}
+	ul.jquerymenu{
+		text-align: right !important;
+//		direction: rtl;
+	}
+}

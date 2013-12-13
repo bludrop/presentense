@@ -1,0 +1,107 @@
+/* Launch Nights block */
+#launch-rightblock{
+	/*background: #fbdfdf url('psd/join-the-convo-2.jpg');*/
+	/*background: #fbdfdf;*/
+	background: #f1f6ee url('images/launch2011/linethingy.png') repeat-y;
+	width: 250px;
+	height: 340px;
+/*	text-indent: -5000px;*/
+	font-family: Arial;
+	margin-bottom: 20px;
+	overflow: hidden;
+	/*border: 1px solid #999;*/
+}
+
+#launch-rightblock p{
+	margin: 0 20px;
+	margin-left: 30px;
+	text-align: justify;
+}
+
+#launch-acc{
+	width: 250px;
+	height: 340px;
+	margin-top: -7;
+	
+}
+
+#join-introp{
+	/* margin-top:-5px;
+	 margin-bottom: 5px;
+	*/
+	
+}
+
+#join-introp p{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+
+}
+
+#launch-rightblock h2{
+margin: 5px 0;
+/*	margin: 0;*/
+	/*border-bottom: 1px solid #000;*/
+}
+
+#launch-rightblock h2 a{
+	display: block;
+	height: 30px;
+	/*background: orange;*/
+	background: url('images/launch2011/arrow-back-green3.png') no-repeat;
+	padding-top: 3px;
+	/*text-indent: -5000px;*/
+outline: 0 !important;
+	color: #fff !important;
+	text-decoration: none;
+	font-size: 19px;
+	padding-left: 10px;
+	text-shadow: 1px 1px 5px #666;
+	
+
+}
+
+#launch-rightblock h2 a:focus,#launch-rightblock h2 a:active{
+outline: 0;
+}
+
+#launch-rightblock h2#launch{
+	margin-top: 0px !important;
+}
+
+#launch-rightblock h2#launch a{
+	background: red url('images/launch2011/LAUNCHHEADER-back6.png') !important;
+	text-indent: -5000px;
+
+}
+
+
+/*
+#launch-rightblock h2#join a{
+	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 -91px;
+}
+
+#launch-rightblock h2#subscribe a{
+	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 -60px;
+}
+
+#launch-rightblock h2#volunteer a{
+	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 -30px;
+}
+
+#launch-rightblock h2#pitch a{
+	background: url('images/j-s-v-p-buttons300.png') no-repeat 0 0px;
+}
+*/
+
+#launch-rightblock p{
+	font-size: 12px !important;
+/*	background: #fbdfdf;*/
+	/*padding: 5px;*/
+}
+
+
+#launch-rightblock a.awesome{
+	margin-top: 10px;
+}
