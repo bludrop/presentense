@@ -1,0 +1,266 @@
+// Blog
+// Need to sassify
+
+@font-face {
+    font-family: 'Alef';
+    src: url('fonts/alef/Alef-bold.eot');
+    src: url('fonts/alef/Alef-bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alef/Alef-bold.woff') format('woff'),
+         url('fonts/alef/Alef-bold.ttf') format('truetype'),
+         url('fonts/alef/Alef-bold.svg#alefbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Alef';
+    src: url('fonts/alef/Alef-regular.eot');
+    src: url('fonts/alef/Alef-regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alef/Alef-regular.woff') format('woff'),
+         url('fonts/alef/Alef-regular.ttf') format('truetype'),
+         url('fonts/alef/Alef-regular.svg#alefregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body.path-blog #content{
+	width: 700px;
+	padding: 0 20px;
+}
+
+body.path-blog  #article{
+font-family: Alef;
+float: none;
+width: 700px;
+margin-left: auto !important;
+margin-right: auto !important;
+padding: 0;
+font-size: 1.2em;
+line-height: 1.5em;
+color: #333;
+}
+
+body.path-blog .article{
+	padding-bottom: 0 !important;
+}
+
+body.path-blog .article p{
+	text-align: justify;
+	margin: 20px 0 !important;
+	
+}
+
+body.path-blog h2.pane-title{
+display: none !important;
+}
+
+body.path-blog h1{
+	text-align: center;
+	width: 500px;
+	margin-left: auto !important;
+	margin-right: auto !important; 
+	font-family: Alef !important;
+	line-height: 1.3em;
+/*	background: #eee;*/
+	padding: .5em !important;
+}
+
+
+body.path-blog h1:hover a{
+color: #666 !important;
+text-shadow: 1px 0 50px #666;
+
+
+}
+
+body.path-blog h1 a{
+	text-shadow: 1px 0 50px rgba(231, 27, 27, 0.5);
+}
+
+body.path-blog #article h2{
+	text-align: center;
+	width: 500px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	font-family: Alef !important;
+	font-size: 18px !important;
+	
+}
+
+
+body.path-blog .node .links{
+	text-align: center;
+}
+
+body.path-blog .node{
+padding-bottom: 0px !important;
+	margin-bottom: 50px !important;
+	border-bottom: 5px solid #ddd;
+}
+
+body.path-blog .node{
+	margin-bottom: 0;
+}
+
+body.path-blog .links{
+margin-top: 0 !important;
+}
+
+body.path-blog .links li{
+	display: block;
+}
+
+
+body.path-blog .links .inline .blog_usernames_blog{
+	display: none;
+}
+
+body.path-blog .node_read_more{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+body.path-blog .node_read_more a{
+	background: #ddd;
+	padding: 5px 15px;
+}
+
+body.path-blog .node_read_more a:hover{
+	color: #333;
+}
+
+body.path-blog #article p img{
+	min-width: 700px;
+	max-width: 700px;
+	
+}
+
+body.path-blog #article .image{
+display: none;
+}
+
+body.path-blog .fb_social_like{
+	display: none !important;
+}
+
+body.path-blog .item-list ul.pager li.pager-previous{
+margin: 0 !important;
+}
+
+body.path-blog #sidebar-bottom, body.path-blog #sidebar-right{
+	width: 700px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	font-family: Alef;
+	border-bottom: 5px solid #ddd;
+	padding: 20px 0 10px 0 !important; 
+	
+	
+}
+
+body.path-blog #end-of-blog-post{
+/*		border-bottom: 5px solid #ddd;*/
+		margin-top: -30px;
+		margin-bottom: 20px;
+		font-size: 14px;
+		font-style: italic;
+		color: #666;
+	
+}
+
+body.path-blog #end-of-blog-post a.article_title{
+	font-style: normal;
+}
+
+body.path-blog #sidebar-right .block{
+margin-bottom: 0 !important;
+}
+
+body.path-blog .panels-flexible-region-18-center{
+width: 100%;
+}
+
+/* featured posts block */
+body.path-blog #sidebar-right .block-views{
+	width: 350px !important;
+	float: left;
+
+}
+
+/* ORANGE BLOCK */
+
+/* ORANGE BLOCK */
+body.path-blog #sidebar-right .block-views {
+	font-family: Alef;
+	font-size: 12px;
+	font-style: italic;
+/*	margin-right: 50px;*/
+}
+
+body.path-blog #sidebar-right .block-views .views-row-odd, #sidebar-right .block-views .views-row-even {
+	clear: both;
+	padding-top: 5px;
+}
+
+
+body.path-blog #sidebar-right .block-views a, #sidebar-right .block-views .date {
+	color: #f48019;
+	text-decoration: none;
+}
+
+body.path-blog #sidebar-right .block-views .date{
+	display: none;
+}
+
+body.path-blog #sidebar-right .block-views .author a{
+	color: #000 !important;
+}
+
+
+body.path-blog #sidebar-right .block-views .img {
+	float: left;
+	width: 97px;
+	padding-right: 10px;
+}
+
+body.path-blog #sidebar-right .block-views .title {
+	padding-bottom: 5px;
+	font-style: normal;
+}
+
+body.path-blog #sidebar-right .block-views h2 {
+	margin: 0;
+	font-style: normal;
+	padding: 3px 0 0 10px;
+	height: 40px;
+	background: #f48019 url(http://presentense.org/sites/all/themes/presentense/images/orange-header-bg.png) left bottom no-repeat;
+	font-size: 18px;
+	color: #fff;
+	border-right: 1px solid #fff;
+	
+}
+
+body.path-blog #sidebar-right .view-display-id-block_2 div{
+	display: inline-block !important;
+}
+
+body.path-blog #sidebar-right .view-display-id-block_2{
+margin-left: 30px;
+} 
+
+body.path-blog  #sidebar-right .block-views div.views-admin-links{
+display: none !important;
+}
+
+body.path-blog #sidebar-right .block-views  div .nivo-caption{
+font-style: normal !important;
+font-size: 14px !important;
+}
+

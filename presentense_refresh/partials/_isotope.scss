@@ -1,0 +1,713 @@
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+}
+
+.isocontainer{
+	font-size: 100%;
+	vertical-align: baseline;
+	font-size: 13px;
+	line-height: 1.7em;
+}
+
+.fellow {
+  width: 100px;
+  height: 135px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  color: #000;
+  box-shadow: 2px 2px 5px #999;
+/*    font-family: 'Open Sans','Helvetica Neue', Arial, sans-serif;*/
+  border: 3px solid;
+	border-radius: 5px;
+}
+
+
+.viso .fellow {
+/*  width: 200px;
+  height: 60px;
+*/
+  width: 150px;
+  height: 75px;
+
+  margin: 5px 5px 10px 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  color: #000;
+  box-shadow: 2px 2px 5px #999;
+/*    font-family: 'Open Sans','Helvetica Neue', Arial, sans-serif;*/
+  border: 3px solid #dfdfdf;
+	border-radius: 5px;
+background: #eee;
+}
+
+
+
+.fellow *{
+  position: absolute;
+  margin: 0;
+}
+
+
+.fellow .info{
+	display: block;
+	width: 100%;
+	height: 23px;
+	padding: .5em;
+	bottom: 0;
+	z-index: 100;
+	color: #fff;
+	background-color: #dfdfdf;
+	text-shadow: 1px 1px 3px #333;
+
+}
+
+.fellow .viso{
+	display: block;
+	width: 100%;
+	/*height: 60px;*/
+	height: 75px;
+
+	padding: .5em;
+	top: 0;
+	z-index: 100;
+	color: #fff;
+	background-color: #dfdfdf;
+	text-shadow: 1px 1px 3px #333;
+
+}
+
+// need to use sass here
+
+/* @group Fellowship Colors */
+a.boston {
+	color: #EE3524;
+
+}
+
+.fellow.boston {
+	border-color: #EE3524;
+
+}
+
+.fellow.boston .info{
+	background: #EE3524;
+}
+
+a.chicago {
+	color: #a71e22;
+}
+
+
+.fellow.chicago {
+	border-color: #a71e22;
+}
+
+.fellow.chicago .info{
+	background: #a71e22;
+}
+
+a.cleveland {
+	color: #DA2958;
+}
+
+
+.fellow.cleveland {
+	border-color: #DA2958;
+}
+
+.fellow.cleveland .info{
+	background: #DA2958;
+}
+a.global {
+	color: #FDB726;
+}
+
+.fellow.global {
+	border-color: #FDB726;
+}
+
+.fellow.global .info{
+	background: #FDB726;
+}
+a.jerusalem {
+	color: #F68B1F;
+}
+
+.fellow.jerusalem {
+	border-color: #F68B1F;
+}
+
+.fellow.jerusalem .info{
+	background: #F68B1F;
+}
+
+a.losangeles {
+	color: #F55520;
+}
+
+.fellow.losangeles {
+	border-color: #F55520;
+}
+
+.fellow.losangeles .info{
+	background: #F55520;
+}
+
+a.moscow {
+	color: #95C842;
+}
+
+.fellow.moscow {
+	border-color: #95C842;
+}
+
+.fellow.moscow .info{
+	background: #95C842;
+}
+
+a.newyork {
+	color: #00A651;
+}
+
+.fellow.newyork {
+	border-color: #00A651;
+}
+
+.fellow.newyork .info{
+	background: #00A651;
+}
+a.philadelphia {
+	color: #13B8DA;
+}
+
+
+.fellow.philadelphia {
+	border-color: #13B8DA;
+}
+
+.fellow.philadelphia .info{
+	background: #13B8DA;
+}
+
+a.stpetersburg {
+	color: #009999;
+}
+
+
+.fellow.stpetersburg  {
+	border-color: #009999;
+}
+
+.fellow.stpetersburg  .info{
+	background: #009999;
+}
+
+a.telaviv {
+	color: #00527f;
+}
+
+
+.fellow.telaviv {
+	border-color: #00527f;
+}
+
+.fellow.telaviv .info{
+	background: #00527f;
+}
+
+a.threshold {
+	color: #3953A4;
+}
+
+
+.fellow.threshold {
+	border-color: #3953A4;
+}
+
+.fellow.threshold .info{
+	background: #3953A4;
+}
+
+a.washingtondc {
+	color: #8800cc;
+}
+
+
+.fellow.washingtondc {
+	border-color: #8800cc;
+}
+
+.fellow.washingtondc .info{
+	background: #8800cc;
+}
+
+
+a.wcjcc {
+	color: #d9007e;
+}
+
+
+.fellow.wcjcc {
+	border-color: #d9007e;
+}
+
+.fellow.wcjcc .info{
+	background: #d9007e;
+}
+
+
+
+/* @end */
+
+.fellow p{
+line-height: 1em;
+}
+
+.fellow.large .city a{
+margin-top: -10px;
+}
+
+.fellow.large .vfounder a{
+margin-top: 0;
+}
+
+.fellow .city{
+position: relative;
+display: none;
+}
+
+.fellow .vfounder{
+position: absolute;
+bottom: 0;
+width: 90%;
+display: none;
+}
+
+.fellow.large .city,.fellow.large .vfounder{
+display: inline-block;
+font-weight: 600;
+}
+
+.fellow .venture{
+	display: none;
+}
+
+.fellow.large .venture{
+	display: block;
+	top: 1px;
+	right: 0;
+	margin-right: 10px;
+	margin-top: 10px;
+	left: 110px;
+	color: #000;
+	font-size: 1.2em;
+}
+
+.fellow .name, .fellow .vname {
+	position: relative;
+  font-size: 1em;
+/*
+  font-weight: strong !important;
+  font-family: "HelveticaNeue-Bold";
+*/
+	font-weight: 700;
+	width: 90%;
+}
+
+.fellow .vname{
+font-size: 1.2em;
+}
+
+.fellow.large .name, .fellow.large .vname{
+	font-size: 1.3em;
+}
+
+.fellow .bio, .fellow .vdesc{
+	display: none;
+}
+
+.fellow .bio a, .fellow .vdesc a{
+position: relative;
+display: block;
+margin-top: 5px;
+text-align: right;
+text-shadow: none;
+
+}
+
+.fellow.large .bio, .fellow.large .vdesc{
+	display: block;
+	/*background: #f5f5f5;*/
+	padding: 10px;
+	font-size: 14px;
+	/*width: 175px;
+	height: 75px;*/
+	margin-top: 150px;
+	/*margin-left: 10px;
+*/
+	color: #000;
+	line-height: 1.3em;
+	text-shadow: 1px 1px 1px #EEE;
+}
+
+
+.fellow.large {
+/*  font-size: 2.0em;*/
+  width: 220px;
+  height: 286px;
+  z-index: 100;
+  background: #d3d3d3 url('images/fabric_plaid.png');
+}
+
+
+.fellow.large .info{
+	height: 33px;
+	top: 100px;
+}
+
+.clickable .fellow:hover {
+  cursor: pointer;
+}
+/*
+.clickable .fellow:hover h3 {
+  text-shadow:
+    0 0 10px white,
+    0 0 10px white
+  ;
+}
+*/
+.clickable .fellow:hover h2 {
+  color: white;
+}
+
+/**** Example Options ****/
+
+#options {
+  padding-bottom: 1.0em;
+}
+
+#options h3 {
+  margin-bottom: 0.2em;
+  font-size: 15px;
+}
+
+#options h4 { 
+  font-weight: bold;
+}
+
+#options ul {
+  margin: 0;
+  list-style: none;
+}
+
+#options ul ul {
+  margin-left: 1.5em;
+}
+
+#options li {
+  float: left;
+  margin-bottom: 0.2em;
+	width: 120px;
+}
+
+#options li a {
+  display: block;
+  padding: 0.4em 0.5em;
+  background-color: #DDD;
+ /* color: #222;*/
+  font-weight: bold;
+  text-shadow: 0 1px hsla( 0, 0%, 100%, 0.5 );
+  background-image: -moz-linear-gradient( -90deg, 
+    hsla( 0, 0%, 100%, 0.5 ) , 
+    hsla( 0, 0%, 100%, 0.0 ) 
+  );
+  background-image: -webkit-gradient(linear, 0 top, 0 bottom, 
+    from( hsla( 0, 0%, 100%, 0.5 ) ), 
+    to(   hsla( 0, 0%, 100%, 0.0 ) )
+  );
+  background-image: -o-linear-gradient( -90deg, 
+    hsla( 0, 0%, 100%, 0.5 ) , 
+    hsla( 0, 0%, 100%, 0.0 ) 
+  );
+}
+
+#options li a:hover {
+  background-color: #eee !important;
+}
+/*
+#options li a:active {
+  background-color: #39D;
+  -webkit-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+     -moz-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+       -o-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+          box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+}
+*/
+#options li a {
+  border-left:  1px solid hsla( 0, 0%, 100%, 0.3 );
+  border-right: 1px solid hsla( 0, 0%,   0%, 0.2 );
+}
+
+#options li:first-child a {
+  border-radius: 7px 0 0 7px;
+  border-left: none;
+}
+
+#options li:last-child a {
+  border-radius: 0 7px 7px 0;
+}
+
+#options li a.selected {
+  background-color: #13F;
+  text-shadow: none;
+  color: white;
+}
+
+/* Combination filter options*/
+
+#options .option-combo {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+#options .option-combo ul {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+#options .option-combo h2,
+#options .option-combo h4 {
+  line-height: 34px;
+  margin-bottom: 0;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+/**** Infinite Scroll ****/
+
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* NEW OPTIONS STYLES- SIDEBAR */
+#block-block-95{
+float: left;
+width: 120px;
+font-size: 13px;
+margin-right: 35px;
+//font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+#block-block-107, #block-block-108, #block-block-110, #block-block-109, #block-block-112, #block-block-113{
+background: #fff;
+font-size: 13px;
+//font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+z-index: 3;
+margin-left: 0 !important;
+margin-right: 0 !important;
+/*width: 900px;*/
+width: 855px;
+box-shadow: 0 7px 10px -8px black;
+padding-left: 0px;
+margin-bottom: 10px;
+
+}
+
+#block-block-110{
+padding-top: 10px;
+}
+
+#block-block-107 ul, #block-block-108 ul, #block-block-113 ul{
+padding-left: 0 !important;
+}
+
+#block-block-95 #options li a, #block-block-107 #options li a, #block-block-108 #options li a, #block-block-113 #options li a{
+background: none;
+border: none !important;
+	border-radius: 0;
+font-weight: 400;
+
+
+}
+
+#block-block-95 #options li a.selected , #block-block-107 #options li a.selected, #block-block-108 #options li a.selected, #block-block-113 #options li a.selected {
+  background-color: #ccc !important;
+  text-shadow: none;
+  color: #333;
+	border-radius: 0;
+}
+
+#block-block-95 #options li a strong, #block-block-107 #options li a strong, #block-block-108 #options li a strong, #block-block-113 #options li a strong{
+color: #222;
+}
+
+
+/* Isotope Intro */
+#block-block-94{
+width: 850px;
+//font-family: "Open Sans", Arial, sans-serif;
+}
+
+#block-block-94 h2{
+font-size: 30px;
+margin: 0;
+//font-family: "Open Sans", Arial, sans-serif;
+font-weight: 800;
+}
+
+/* Remove Right Menu */
+body.path-fellows-2012 #sidebar-right{
+display: none;
+}
+
+body.path-fellows-2012 #article{
+width: 929px !important;
+}
+
+body.path-fellows-2013 #all_years{
+font-size: 13px;
+margin-left: 10px;
+}
+
+/* Partners Isotope */
+ul#partners-isotope{
+padding-left: 0 !important;
+
+}
+
+
+
+#partners-isotope li, .vlogos .partner{
+list-style-type: none;
+line-height: 1em;
+font-weight: 400;
+}
+
+#partners-isotope .partner, .vlogos .partner{
+float: left;
+/*
+max-width: 200px;
+margin: 10px;
+*/
+max-width: 160px;
+margin: 3px;
+padding: 10px;
+color: #000;
+font-size: 20px;
+text-align: center;
+box-shadow: none;
+border: none;
+border-radius: 0;
+//font-family: 'Open Sans','Helvetica Neue', Arial, sans-serif;
+
+}
+
+#partners-isotope img, .vlogos .partner img{
+max-width: 160px !important;
+}
+
+.path-node-3610 #options li{
+/*float: none !important;*/
+}
+
+/* Ventures Logos Isotope */
+.partner .venture_title{
+display: none;
+}
+
+.vlogos{
+width: 949px;
+}
