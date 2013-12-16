@@ -1,0 +1,95 @@
+// Ventures
+// 1. Venture Table
+// 2. Venture Profiles
+
+/* Venture Table Styles */
+
+.view-venture-view{
+	font-size: 12px !important;
+	thead{
+		background-color: #dfdfdf; //leave for now
+		tr th{
+			text-align: center !important;
+		}
+	}
+	tr{
+		border-bottom: none !important;
+		td{
+			padding-top: 10px !important;
+			padding-bottom: 10px !important;
+		}
+		&.odd{
+			background-color: #fff !important;
+			td.active{
+				background-color: #fff !important;
+			}
+			
+		}
+		&.even td.active{ //This is not the best way to do this
+			background-color: #eee !important;
+		}
+				
+	}
+	td{
+		padding-left: 10px !important;
+	}
+}
+
+/* Venture Profile Styles */
+
+#venture-profile{
+	/*padding-bottom: 60px;*/
+	h1{
+		font-size: 40px;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 5px;
+	}
+	h2{
+		font-weight: 100;
+		margin-bottom: 20px;
+		text-align: right;
+	}
+}
+
+#venture-details{
+	display: block;
+	width: 150px;
+	float: left;
+	margin-right: 20px;
+	background: #ddd; //leave for now
+	padding: 1em;
+	font-size: 14px;
+}
+
+#venture-logo{
+	width: 150px;
+	margin-bottom: 1em;
+}
+
+#venture-factbox{
+	width: 150px;
+	h3{
+		margin: 0;
+		border-bottom: 1px solid #ccc;
+	}
+	dt{
+		font-weight: bold;
+	}
+	
+	dd{
+	margin-left: 10px !important;
+	}
+	
+}
+
+#venture-text{
+	/*clear: both;
+	padding-top: 10px;*/
+	text-align: justify;
+}
+
+
+body.path-taxonomy-term .taxonomy{
+	clear: both;
+	margin-bottom: 10px;
+}

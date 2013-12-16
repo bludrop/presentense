@@ -1,0 +1,138 @@
+/* Social Media Press Release */
+#pr-headline{
+	background: #eee url('http://presentense.org/newsletter/files/shared/ptstar-white-trans2-215.png') no-repeat right top;
+	text-shadow: #ccc 3px 5px 10px;
+	color: $ptred;
+	padding: 10px;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#pr-topdate{
+font-size: 14px;
+margin-top: 0;
+}
+
+.pr-subhead{
+font-weight: bold;
+}
+
+body.type-pressrelease{
+	.panel-col-first{
+		font-size: 12px;
+		width: 200px;
+		margin-right: 15px;
+		/*opacity: .5;*/
+		 h2.pane-title{
+			display: block;
+			width: 185px;
+			background-color: $ptred;
+			// why so important?
+			color: #fff !important;
+			padding: 2px 0 2px 5px !important;
+			font-weight: normal !important;
+			font-size: 18px !important;
+			text-shadow: 1px 1px 2px #999 !important;
+			border-left: 10px solid #5C0910 !important;
+			margin-bottom: 10px !important;
+		}
+	}
+	.panel-col-last{
+		font-size: 12px;
+		width: 235px;
+		margin-left: 14px;
+		/*opacity: .5;*/
+		 h2.pane-title{
+			display: block;
+			background: #E21222 url('http://presentense.org/newsletter/files/shared/PT_star_mini_shadow.png') no-repeat 5px .5px;
+			color: white !important;
+			padding-left: 40px !important;
+			padding-top: 2px !important;
+			font-weight: bold !important;
+			font-size: 20px !important;
+			text-shadow: 1px 1px 2px #999 !important;
+			width: 189px !important;
+			height: 27px !important;
+			/*margin-bottom: 10px !important;*/
+		}
+		.panel-pane{
+			/*background: rgba(226,18,34,.25);*/
+			.pane-content{
+				background: #F9D0D3; //see below
+				padding: 10px;
+			}
+		}
+		
+	}
+	.panel-col-first:hover, .panel-col-last:hover{
+		opacity: 1;
+	}
+	.panel-col-bottom{
+		border-top: 4px double #999;
+		margin-top: 15px !important;
+	}
+	.emvideo{
+		margin-bottom: 10px;
+	}
+	.emvideo-modal img{
+		margin-bottom: 10px;
+	}
+	.field-field-prpressphotos img{
+		margin-bottom: 10px;
+	}
+	// this can probably be done better
+	#add-this .pane-content,
+	#pt-facts .pane-content,
+	#resource-links .pane-content{
+		margin-bottom: 1em !important;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+	.panel-3col-stacked .panel-col-last .panel-separator{
+		margin-bottom: 0 !important;
+	}
+	#pt-facts ul, #resource-links ul {
+		list-style-type: square !important;
+		list-style-position: outside;
+		/*padding-left: 25px !important;*/
+		li{
+			list-style-type: square !important;
+			a{
+				text-decoration: none !important;
+				&:hover{
+					text-decoration: underline !important;
+				}
+			}
+		}
+	}
+}
+
+#twitter-pitch{
+	background: #F9D0D3; // see below
+	h2.pane-title{
+		background: #F9D0D3 !important; //maybe try to define this in terms of $ptred
+		color: #000 !important;
+		font-size: 12px !important;
+		text-shadow: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		padding-left: 10px !important;
+		height: 10px !important;
+	}
+	.field-field-prtweet{
+		font-size: 11px;
+	}
+	
+}
+
+#tweet-button .pane-content{
+	padding: 0 10px;
+}
+
+#get-social div.pane-content{
+margin: 0;
+padding:0;
+}

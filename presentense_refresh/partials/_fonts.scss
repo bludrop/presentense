@@ -1,25 +1,19 @@
 /* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 // Font Variables
+//@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic");
 $sspro: "Source Sans Pro";
 
 
-// Trying to deprecate this font?
+// Trying to deprecate this font? - update version of font from github - also convert to using a library mixin?
 @font-face {
-	font-family: 'LeagueGothicRegular';
-	src: url('fonts/League_Gothic-webfont.eot');
-	src: local('☺'), url('fonts/League_Gothic-webfont.woff') format('woff'), url('fonts/League_Gothic-webfont.ttf') format('truetype'), url('fonts/League_Gothic-webfont.svg#webfont') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-$leaguegothic: 'LeagueGothicRegular';
-
-// This font should also be deprecated
-@font-face {
-	font-family: 'Desyrel';
-	src: url('fonts/desyrel-webfont.eot');
-	src: local('☺'), url('fonts/desyrel-webfont.woff') format('woff'), url('fonts/desyrel-webfont.ttf') format('truetype'), url('fonts/desyrel-webfont.svg#webfontDHYUuUJT') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'League Gothic';
+    src: url('fonts/League_Gothic-webfont.eot');
+    src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/League_Gothic-webfont.woff') format('woff'),
+         url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('fonts/League_Gothic-webfont.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
+$leaguegothic: 'League Gothic';

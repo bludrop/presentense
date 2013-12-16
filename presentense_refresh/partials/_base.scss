@@ -1,0 +1,47 @@
+// Base Styles
+
+/* General Styles */
+
+body {
+	font-family: $sspro, Arial, sans-serif;
+	color: $darkgrey;
+	margin: 0;
+	padding: 0;
+	background: url(images/bg.png) left top repeat-x;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+}
+
+/* Sidebar (Right) */ //Is this right?
+#sidebar-right {
+	padding: 10px 20px 0 19px;
+	width: 302px;
+	float: left;
+}
+
+//this should be moved
+#sidebar-right .block{
+margin-bottom: 20px;
+}
+
+a {
+	color: $ptred;
+	text-decoration: none;
+	&:hover, &:active{
+		text-decoration: underline;
+	}
+}
+
+.body {
+/*	width: $fullwidth;*/
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+	height: 0px;
+	font-size: 0px;
+}

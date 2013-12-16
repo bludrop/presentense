@@ -1,0 +1,141 @@
+/* Footer */
+#footer {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background: #959595; //leave this for now
+	padding-top: 20px;
+	clear: both;
+	font-size: 12px;
+	color: #333; // leave this for now
+	line-height: 22px;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+}
+
+
+#stay-connected-bar{
+	clear: both;
+	width: 100%;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	background: rgb(234, 234, 234); //leave this for now
+	padding-top: 1px;
+	padding-bottom: 15px;
+}
+
+#stay-connected{
+	display: block;
+	width: $fullwidth;
+	margin-left: auto;
+	margin-right: auto;
+	background: url('http://presentense.org/newsletter/files/shared/stay_connected_text2.png') left center no-repeat;
+	height: 60px;
+	
+	ul{
+		margin-left: 305px;
+		width: 700px !important;
+		li{
+			float: left;
+			list-style-type: none;
+			margin-right: 12px;	
+			font-size: 13px;
+			a{
+				opacity: .9 !important;
+				&:hover{
+					opacity: 1 !important;
+					
+				}
+			}
+				
+		}
+		li>a>img{
+			margin-top: 7px;
+		}
+	}
+}
+
+
+li#newsletter-signup{
+	margin-right: 0 !important;
+	background: #DDD; //leave for now
+	padding: 3px;
+	font-weight: bold;
+	input[type="text"] {
+		border: 1px solid #CCC;
+	}
+	
+}
+
+#breadcrumb-bar{
+	clear: both;
+	width: 100%;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	background: #575757; //leave for now
+	padding: 5px 0;
+
+}
+
+
+#breadcrumb{ //NOT USED
+	display: none;
+	width: $fullwidth;
+	margin-left: auto;
+	margin-right: auto;
+	background: url('images/ptstar-miniwhite-transparent.png') no-repeat;
+	/*padding-left: 50px;*/
+	height: 30px;
+	p{
+		margin: 0;
+		color: #ccc;
+		padding-top: 5px;
+		margin-left: 50px;
+	}
+
+}
+
+
+#footer-wrapper {
+	width: $fullwidth;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#footer{
+	#block-block-37, #block-block-38, #block-block-39, #block-block-42{
+		float: left;
+		/*	height: 200px;*/
+		width: 175px;
+		border-right: 1px solid #666;
+		padding: 0 0 0 40px;
+
+	}
+	ul{
+		list-style-type: none;
+	}
+	p{
+		margin: 0;
+		padding: 0;	
+	}
+	a {
+		color: #333; //leave for now
+		text-decoration: none;
+	}
+	#block-block-37 {
+		padding: none;
+	}
+	#block-block-42 {
+		border-right: none;
+	}
+}
+
+.login-link {
+	padding-top: 12px;
+	a {
+		color: #777; //leave for now
+		text-decoration: none;
+		font-size: 16px;
+	}
+}

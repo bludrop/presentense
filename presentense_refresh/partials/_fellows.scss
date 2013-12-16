@@ -1,0 +1,150 @@
+// Fellows
+// 1. Fellows Directory
+// 2. Fellow Profiles
+
+/* Fellows Directory */ // Does this even exist anymore?
+body.path-fellows .views-table {
+    float: left;
+    width: 175px;
+    margin-right: 20px;
+    caption{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    a{
+        border: none;
+    }
+}
+
+body.path-fellows-all .views-field-title {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, .75);
+    padding: 3px;
+    width: 94px;
+    font-size: 13px;
+    a{
+        border-bottom: none;
+        color: #fff;
+    }
+}
+
+
+
+.view-fellows-directory .views-table{
+	font-size: 13px;
+	.fellow-name a{
+		font-weight: bold;
+	}
+	
+
+}
+
+/* Fellow Profile Styles */
+
+#fellow-profile{
+}
+
+#fellow-left{
+	float: left;
+	width: auto;
+	margin-top: -20px;
+}
+
+#fellow-right{
+	/*float: left;
+	width: auto;*/
+	font-size: 14px;
+	margin-left: 15px;
+	margin-top: 20px;
+	/*border: 1px solid #999;*/
+}
+
+#profile{
+	background: white;
+	/*display: inline;*/
+	margin: 0 30px 10px 0px;
+	width: 200px;
+	padding: 20px 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .25); //need to prefix?
+	border: 1px solid #EEE;
+	p{
+		margin: 0;
+	}
+	#fellow-name{
+		font-weight: 800; //also could do 100
+		a{
+			color: #000;
+		}
+	}
+	#fellow-venture{
+		font-size: 12px;
+		font-style: italic;
+	}
+	img{
+		margin-bottom: 5px;
+		border: 1px solid #eee;
+	}
+}
+
+#cep_info{
+	margin: 0;
+	/*width: 220px;*/
+	font-size: 12px;
+}
+
+#cep_year{
+	float: right;
+}
+
+.fellow-tags{
+	background: #ccc;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+#fellow-bio{
+	background: #eee;
+	padding: 10px 20px;
+	p{
+		text-align: justify;
+	}
+}
+
+
+/* @group Social Fellow Profile Links */ //This needs to be fixed
+a.profile_twitter{
+display: block;
+	width: 16px !important;
+	height: 16px !important;
+	background: url('images/icn/profile_links/twitter_16.png') no-repeat;
+	text-indent: -9999px;
+}
+
+a.profile_facebook{
+	width: 16px !important;
+	height: 16px !important;
+	background: url('images/icn/profile_links/facebook_16.png') no-repeat;
+	text-indent: -9999px;
+
+}
+
+a.profile_linkedin{
+	width: 16px !important;
+	height: 16px !important;
+	background: url('images/icn/profile_links/linkedin_16.png') no-repeat;
+	text-indent: -9999px;
+
+}
+
+/*
+.view-fellow-venture-attach{
+display: none;
+}
+*/
+
+/* @end */

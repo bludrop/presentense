@@ -1,0 +1,218 @@
+// Content - clean this file up
+
+/* Content */
+// This should be moved?
+#content,#front {
+	width: $fullwidth;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Article/Node Styles */
+#article {
+	padding: 10px 0 0 20px;
+	width: 588px;
+	float: left;
+	
+	h1, h2{
+		margin: 0;
+		padding: 0;
+	}
+	h1{
+		font-size: 30px;
+		text-transform: none;
+		color: $ptred;
+//		a{
+//			text-decoration: none;
+//			color: $ptred;
+//		}
+	}
+	h2{
+		font-size: 20px;
+		color: $darkblue; //trying it out
+		.arrow {
+			color: $ptred;
+			padding: 0 10px;
+		}
+		.author a {
+			text-decoration: underline;
+//			color: #666;
+			color: $lightgrey;
+		}
+	}
+}
+
+
+
+.article {
+	padding: 10px 0 10px 0;
+	.image {
+		float: left;
+		padding: 10px 10px 10px 0;
+	}
+	.date {
+		font-family: Arial;
+//		color: #666;
+		color: $lightgrey;
+		font-style: italic;
+	}
+}
+
+/* Assorted Node Accoutrements */ //Maybe don't need this
+
+.node_read_more a {
+    color: $ptred;
+}
+
+//ul.links li.blog_usernames_blog, ul.links li.comment_add, ul.links li.comment_comments {
+//    padding: 0 16px 0 0;
+//}
+
+// WHAT IS THIS?
+//ul.menu li a{
+//	color: #e31c18;
+//	text-decoration: none;
+//	font-size: 12px;
+//	line-height: -2px;
+//}
+
+
+/* Orange/Latest Articles Blog- for Blog */
+// I think this was replaced for the blog site- check those styles too
+#block-views-latestarticles-block_1 {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: italic;
+}
+
+#block-views-latestarticles-block_1 .views-row-odd, #block-views-latestarticles-block_1 .views-row-even {
+	clear: both;
+	padding-top: 10px;
+}
+
+
+#block-views-latestarticles-block_1 a, #block-views-latestarticles-block_1 .date {
+	color: #f48019;
+	text-decoration: none;
+}
+
+#block-views-latestarticles-block_1 .img {
+	float: left;
+	width: 97px;
+	padding-right: 10px;
+}
+
+#block-views-latestarticles-block_1 .title {
+	padding-bottom: 5px;
+	font-style: normal;
+}
+
+#block-views-latestarticles-block_1 h2 {
+	margin: 0;
+	font-style: normal;
+	padding: 4px 0 0 30px;
+	height: 42px;
+	background: #f48019 url(images/orange-header-bg.png) left bottom no-repeat;
+	font-size: 20px;
+	color: #fff;
+}
+
+/* TAG */ //what is this for?
+.taxonomy {
+	font-style: italic;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 13px;
+	.links {
+		padding-left: 10px;
+		li {
+			padding-left: 15px;
+			background: url(images/tag-bg.png) 0 3px no-repeat; //what is this?
+		}
+	}
+}
+
+.node .links {
+	margin-top: 6px;
+}
+
+.blog_usernames_blog a, a.blog {
+	margin-top: 6px;
+	font-size: 13px;
+	height: 21px;
+	padding: 3px 0 0 45px;
+	background: url(images/blog-link-bg.png) 20px 0 no-repeat; //what is this?
+}
+
+// what is this?
+.comment_add a, .comment_comments a, .comment_new_comments a{
+	margin-top: 6px;
+	font-size: 13px;
+	height: 21px;
+	padding: 3px 0 0 25px;
+	background: url(images/comment-add-bg.png) 0px 0 no-repeat;
+}
+
+/* Story Listing (5 Minutes With) Styles */ //Still around?
+
+body.path-launch-nights-2012-interviews table{
+	width: 588px;
+	margin-bottom: 20px;
+	thead{
+		display: none;
+	}
+	td{
+		background: none !important;
+		vertical-align: top;
+		&.views-field-field-fellowphoto-fid{
+			width: 50px;
+			padding: 10px;
+			/*padding-right: 10px;*/
+		}
+		&.views-field-title{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 15px;
+			>a{
+				font-family: Georgia, serif;
+				font-size: 20px;
+			}
+			a:last-child{ // ?
+				font-size: 14px !important;
+			}
+			
+		}
+	}
+	tr{
+		border-bottom: 1px solid #ddd;
+		/*margin-bottom: 5px;*/
+		&.odd{
+			background: #eee;
+		}
+		&.even{
+			background: #fff;
+		}
+	}
+	caption{
+		background:#000000;
+		font-family: $leaguegothic, Arial, Sans-serif;
+		font-size:30px;
+		text-transform:uppercase;
+		/*	margin-bottom: 10px;*/
+		color: #fff;
+		a{
+			color: #fff;
+		}
+		
+	}
+	
+}
+
+/* Impact Page Styles */
+body.path-impact{
+	#article h1, #article h2{
+		display: none !important; 
+	}
+}

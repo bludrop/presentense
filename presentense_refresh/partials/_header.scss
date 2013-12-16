@@ -1,0 +1,185 @@
+// Header
+// 1. Header
+// 2. Search
+// 3. Menu
+// 4. Banner Region
+
+/* Header */
+
+#header {
+/*	height: 106px;*/
+/*	padding: 5px 10px 0 0;*/
+/*	background: url(images/header-bg.png) left bottom repeat-x;*/
+	margin-bottom: 10px;
+	background: #dfdfdf;
+}
+
+
+#header-wrap {
+	display: block;
+	width: $fullwidth;
+	margin: 0 auto;
+}
+
+#search-bar{
+	display: block;
+	width: $fullwidth;
+	height: 20px;
+}
+
+#logo-menu-bar{
+	display: block;
+	width: $fullwidth;
+	/*height: 50px;*/
+}
+
+#logo {
+	padding-top: 0px;
+	height: 0px; // this should be fixed
+	float: left;
+	
+	img{
+		max-height: 80px;
+	}
+	
+}
+
+/* Search */
+#search,#facebook-connect,.login-link,#top-newsletter-signup,#lang-flags {
+	float: right;
+	height: 32px;
+	padding-top: 6px;
+}
+
+#top-newsletter-signup{
+font-size: 15px;
+margin-top: 2px;
+}
+
+#lang-flags{
+margin-right: 15px;
+margin-top: 2px;
+}
+
+
+#search {
+	padding-right: 15px;
+	.form-item {
+		display: block;
+		float: left;
+		margin: 0;
+	}
+	input.form-text {
+		margin: 0 10px;
+		padding: 8px 4px;
+		border: none;
+		width: 140px;
+		height: 5px;
+		background: url(/sites/all/themes/presentense/images/search-bg.png) no-repeat;
+	}
+	input.form-submit {
+	height: 22.5px;
+	}
+}
+
+
+
+/* Menu */
+
+#menu {
+	clear: both; // this should not be here
+/*	margin-top: 10px;*/
+	float: right;
+
+// this might be too much nesting?	
+	ul#navlist{
+		font-size: 16px;
+		li{
+			margin: 0;
+			padding: 0 5px;
+			a{
+				padding: 6px 10px 0 10px;
+				display: inline-block;
+				height: 41px;
+				color: #4d4d4d;
+				font-weight: normal;
+				text-decoration: none; //remove
+				&.active{
+					color: white;
+					background: $ptred /*url(images/menu-bg.png) left bottom no-repeat*/; //this png has to change color
+				}
+			}
+			
+		}
+	}
+	
+}
+
+
+/* Banner region */
+// Is this still going to exist?
+
+#banner-region {
+	width: 100%;
+/*	height: 100px;*/
+	/*margin-top: 66px;*/
+	clear: both;
+	border-top: 1.5px solid $ptred;
+/*	margin-top: 120px;*/
+	background: #fff;
+
+	// THESE ARE ALL OLD COLORS
+	
+	body.path-blog &{
+			background: rgb(244,128,25); //old color
+		}
+	body.path-about &, body.path-contact &{
+		background: rgb(252,0,18);
+	}
+	body.path-fellowship &, body.path-institute &, body.path-cep &{
+			background: rgb(17,183,217);
+	
+	}
+	
+	body.path-institute-fellows #banner-region, body.path-institute-people #banner-region{
+		background: rgb(17,183,217) !important;
+	
+	}
+	
+	body.path-local #banner-region{
+			background: rgb(20,195,82);
+	
+	}
+	
+	body.path-people &, body.path-ventures &, body.path-fellows &, body.type-fellow-profile &, body.type-venture &{
+			background: rgb(146,32,194);
+	
+	}
+	
+	body.path-moscow &, body.path-russia &{
+		background: rgb(94,81,161);
+	}
+	
+	body.path-ptsocial &{
+		background: rgb(79,145,205);
+	}
+	
+	
+}
+
+
+
+
+.banner > .block {
+	width: $fullwidth;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	margin-top: 0 !important;
+	
+	p{
+		margin-top: 0;
+	
+	}
+}
