@@ -6,7 +6,7 @@ $sspro: "Source Sans Pro";
 
 // Trying to deprecate this font? - update version of font from github - also convert to using a library mixin?
 @font-face {
-    font-family: 'League Gothic';
+    font-family: 'LeagueGothicRegular';
     src: url('fonts/League_Gothic-webfont.eot');
     src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
          url('fonts/League_Gothic-webfont.woff') format('woff'),
@@ -16,4 +16,6 @@ $sspro: "Source Sans Pro";
     font-style: normal;
 }
 
-$leaguegothic: 'League Gothic';
+$leaguegothic: 'LeagueGothicRegular';
+
+$fontsize: 16px; //For Source Sans Pro, needs to be higher
