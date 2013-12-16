@@ -5,61 +5,23 @@
 ** Version 4.0 2013
 ** Styles by bludrop studios
 */
+//Import Modules (include in _base.scss?)
+@import "modules/all";
 
-// Colors 
-// =Main
-$ptred: #a02225;
-$darkblue: #4ba6dd;
-$darkgrey: #333132;
-// =Accent
-$lightgrey: #7e8083;
-$orange: #fbb040;
-$lightblue: #93cde5;
-
-// =Fellowship Colors
-$boston: #EE3524;
-$chicago: #a71e22;
-$cleveland: #DA2958;
-$global: #FDB726;
-$jerusalem: #F68B1F;
-$moscow: #95C842;
-$newyork: #00A651;
-$philadelphia: #13B8DA;
-$telaviv: #00527f;
-$threshold: #3953A4;
-$washingtondc: #8800cc;
-$wcjcc: #d9007e;
-
-// Use this until MAPS come out in Sass 3.3
-$cities: (boston #EE3524) (chicago #a71e22) (cleveland #DA2958) (global #FDB726) (jerusalem #F68B1F) (moscow #95C842) (newyork #00A651) (philadelphia #13B8DA) (telaviv #00527f) (threshold #3953A4) (washingtondc #8800cc) (wcjcc #d9007e);
+// Import Partials
+@import "partials/fonts";
+@import "partials/base";
+@import "partials/header";
+@import "partials/content";
+@import "partials/footer";
+@import "partials/front";
+@import "partials/components";
+@import "partials/fellows";
+@import "partials/ventures";
+@import "partials/calendar";
 
 
-/* Fonts */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
-$sspro: "Source Sans Pro";
 
-// Trying to deprecate this font?
-@font-face {
-	font-family: 'LeagueGothicRegular';
-	src: url('fonts/League_Gothic-webfont.eot');
-	src: local('☺'), url('fonts/League_Gothic-webfont.woff') format('woff'), url('fonts/League_Gothic-webfont.ttf') format('truetype'), url('fonts/League_Gothic-webfont.svg#webfont') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-$leaguegothic: 'LeagueGothicRegular';
-
-// This font should also be deprecated
-@font-face {
-	font-family: 'Desyrel';
-	src: url('fonts/desyrel-webfont.eot');
-	src: local('☺'), url('fonts/desyrel-webfont.woff') format('woff'), url('fonts/desyrel-webfont.ttf') format('truetype'), url('fonts/desyrel-webfont.svg#webfontDHYUuUJT') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-
-/* Other Variables */
-$fullwidth: 949px;
 
 /* General Styles */
 

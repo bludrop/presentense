@@ -1,0 +1,26 @@
+// Colors 
+// =Main
+$ptred: #a02225;
+$darkblue: #4ba6dd;
+$darkgrey: #333132;
+// =Accent
+$lightgrey: #7e8083;
+$orange: #fbb040;
+$lightblue: #93cde5;
+
+// =Fellowship Colors
+$boston: #EE3524;
+$chicago: #a71e22;
+$cleveland: #DA2958;
+$global: #FDB726;
+$jerusalem: #F68B1F;
+$moscow: #95C842;
+$newyork: #00A651;
+$philadelphia: #13B8DA;
+$telaviv: #00527f;
+$threshold: #3953A4;
+$washingtondc: #8800cc;
+$wcjcc: #d9007e;
+
+// Use this until MAPS come out in Sass 3.3
+$cities: (boston #EE3524) (chicago #a71e22) (cleveland #DA2958) (global #FDB726) (jerusalem #F68B1F) (moscow #95C842) (newyork #00A651) (philadelphia #13B8DA) (telaviv #00527f) (threshold #3953A4) (washingtondc #8800cc) (wcjcc #d9007e);
