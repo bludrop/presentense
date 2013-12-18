@@ -11,6 +11,7 @@ body {
 	background: url(images/bg.png) left top repeat-x;
 }
 
+// Should probably define all H# styles at some point
 h2 {
 	margin: 0;
 	padding: 0;
@@ -32,7 +33,9 @@ a {
 	color: $ptred;
 	text-decoration: none;
 	&:hover, &:active{
-		text-decoration: underline;
+//		text-decoration: underline;
+		color: $lightgrey;
+		text-decoration: none;
 	}
 }
 

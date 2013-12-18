@@ -56,7 +56,7 @@
 ul.jquerymenu{
 	background: #eee; //leave for now
 	padding: 15px;
-//	font-family: $leaguegothic, Arial, Sans-serif;
+	font-family: $leaguegothic, $sspro, Arial, Sans-serif;
 	li{
 		a{
 			display: block;
@@ -143,6 +143,8 @@ ul.jquerymenu{
 		}
   		
   	}
+  	font-family: inherit;
+  	font-size: 13px;
   }
 }
 
