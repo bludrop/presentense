@@ -7,7 +7,6 @@
 // AWESOME BUTTON - Need to Modify and Change colors (if gradients- should be css3)
 
 /* Awesome Button */
-
 .awesome, .awesome:visited {
 	background: #222 url(images/alert-overlay.png) repeat-x; 
 	display: inline-block; 
@@ -42,8 +41,8 @@
 }
 
 
-	.red.awesome, .red.awesome:visited			{ background-color: rgb(231,28,28); }
-	.red.awesome:hover							{ background-color: #e33100; }
+	.red.awesome, .red.awesome:visited			{ background-color: $ptred; }
+	.red.awesome:hover							{ background-color: transparentize($ptred,.2) }
 
 
 
